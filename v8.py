@@ -213,7 +213,6 @@ if __name__ == "__main__":
     video_path = "vid2.mp4"
     main(video_path, use_metadata=True)  # Set to False to avoid reading metadata
 
-
 # Google Python Style Guide
 # https://stackoverflow.com/questions/3898572/what-are-the-most-common-python-docstring-formats
 
