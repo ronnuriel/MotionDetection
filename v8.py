@@ -88,8 +88,8 @@ def detector(detector_queue, presenter_queue):
 
         # Detect motion by finding the difference between the current and previous frame
         diff = cv2.absdiff(gray_frame, prev_frame)
-        _, thresh = cv2.threshold(diff, 25, 255, cv2.THRESH_BINARY)
-        thresh = cv2.dilate(thresh, None, iterations=2)
+        _, thresh = cv2.threshold(diff, 32, 255, cv2.THRESH_BINARY)
+        thresh = cv2.dilate(thresh, None, iterations=5)
 
         # Find contours of the motion
         cnts = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
